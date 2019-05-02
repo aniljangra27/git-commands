@@ -19,5 +19,5 @@ Step 2: After the merge conflicts are resolved, stage the changes accordingly, 
   git push <upstream-branch-url> HEAD
 Step 3: The pull request will be updated and marked as merged.
 
-# Delete comment push to origin branch
+# delete a commit in git, local and remote
 https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/
