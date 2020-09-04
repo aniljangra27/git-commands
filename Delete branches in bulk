@@ -1,0 +1,14 @@
+#Run this script from the git repository 
+#Step 1
+# List all the merged branches
+BRANCHES=`git branch -r --merged | grep -v "*" | grep -v master | grep -v develop | grep -v release/ | grep -v hotfix/ | sed 's/origin\///'`
+#printf "Removing branches: \n$BRANCHES" > abc.txt #write into file
+printf "Removing branches: \n$BRANCHES"
+
+#Step -2 (Comment Step 2 - first time to view all branches to be deleted)
+# Delete all remote branches merged into the current branch, excluding release/master/develop branches
+git branch -r --merged | grep -v "*" | grep -v master | grep -v develop | grep -v release/ | grep -v hotfix/ | sed 's/origin\///' | xargs -n 1 git push --delete origin
+
+
+
+#Reference: https://jira.atlassian.com/browse/BSERV-4142?focusedCommentId=774056&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-774056
