@@ -1,4 +1,4 @@
-#Run this script from the git repository 
+#Run this script from the git repository - To delete branched on bulk or delete old branches that are merged 
 #Step 1
 # List all the merged branches
 BRANCHES=`git branch -r --merged | grep -v "*" | grep -v master | grep -v develop | grep -v release/ | grep -v hotfix/ | sed 's/origin\///'`
